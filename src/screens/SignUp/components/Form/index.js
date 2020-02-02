@@ -17,6 +17,7 @@ class SignUp extends React.Component {
     event.preventDefault();
     const { email, password, confirmPassword } = this.state;
     if (!email || !password || !confirmPassword) alert('Todos los campos son requeridos');
+    else if (password !== confirmPassword) alert('Las passwords no coinciden');
     else {
       console.log('email: ' + this.state.email);
       console.log('password: ' + this.state.password);
