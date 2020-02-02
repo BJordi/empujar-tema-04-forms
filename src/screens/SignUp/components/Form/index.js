@@ -15,9 +15,13 @@ class SignUp extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log('email: ' + this.state.email);
-    console.log('password: ' + this.state.password);
-    console.log('confirmPassword: ' + this.state.confirmPassword);
+    const { email, password, confirmPassword } = this.state;
+    if (!email || !password || !confirmPassword) alert('Todos los campos son requeridos');
+    else {
+      console.log('email: ' + this.state.email);
+      console.log('password: ' + this.state.password);
+      console.log('confirmPassword: ' + this.state.confirmPassword);
+    }
   }
 
   render() {
